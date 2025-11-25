@@ -1,14 +1,14 @@
 Máy tính nâng cao (Advanced Calculator)
 
-Một ứng dụng máy tính di động chuyên nghiệp với các tính năng nâng cao, được xây dựng bằng Flutter.
+Ứng dụng máy tính di động chuyên nghiệp với các tính năng nâng cao, được xây dựng bằng Flutter.
 
-Mô tả dự án (Project Description)
+Mô tả dự án
 
 Advanced Calculator là ứng dụng máy tính đầy đủ tính năng, hỗ trợ:
 
 Ba chế độ: Cơ bản, Khoa học, Lập trình
 
-Hàm khoa học: Hàm lượng giác, Logarithm, Phép lũy thừa, Giai thừa, Hằng số (π, e)
+Hàm khoa học: Hàm lượng giác (sin, cos, tan), Logarithm (ln, log), Lũy thừa, Căn bậc n, Giai thừa, Hằng số (π, e)
 
 Hàm nhớ: M+, M-, MR, MC
 
@@ -28,22 +28,22 @@ Kiểm thử đơn vị & tích hợp: Đảm bảo >80% bao phủ kiểm thử
 
 Tối ưu hiệu suất: Xử lý các phép tính phức tạp hiệu quả
 
-Dự án được triển khai theo kiến trúc sạch và quản lý trạng thái nâng cao sử dụng Provider.
+Ứng dụng được triển khai theo kiến trúc sạch và quản lý trạng thái nâng cao bằng Provider.
 
-Ảnh chụp màn hình / GIF (Screenshots / GIFs)
+Ảnh chụp màn hình / GIF
 Chế độ cơ bản	Chế độ khoa học	Chế độ lập trình
 Basic	Scientific	Programmer
 
-Thay thế các ảnh trên bằng ảnh hoặc GIF thực tế của bạn.
+Thay thế ảnh trên bằng ảnh/GIF thực tế của bạn trong thư mục screenshots/.
 
-Tính năng (Features)
+Tính năng
 Chế độ máy tính
 
 Cơ bản: Các phép tính số học tiêu chuẩn
 
 Khoa học: sin, cos, tan, ln, log, lũy thừa, căn bậc n, giai thừa
 
-Lập trình: Chuyển đổi nhị phân, bát phân, thập phân, hệ thập lục phân; các phép toán bitwise; dịch bit
+Lập trình: Chuyển đổi nhị phân, bát phân, thập phân, thập lục phân; các phép toán bitwise; dịch bit
 
 Hàm nhớ (Memory Functions)
 
@@ -93,30 +93,48 @@ Kết quả hiển thị mờ dần
 
 Rung khi xảy ra lỗi
 
-Kiến trúc dự án (Project Architecture)
+Hướng dẫn cài đặt & chạy
 
+Clone hoặc tải project về:
+
+git clone <link-repo-cua-ban>
+cd advanced_calculator
+
+
+Cài đặt dependencies:
+
+flutter pub get
+
+
+Chạy ứng dụng trên thiết bị Android/iOS:
+
+flutter run
+
+
+Lưu ý: cần cài đặt Flutter SDK và thiết lập môi trường Android/iOS trước.
+
+Kiến trúc dự án
 lib/
-├── main.dart
-├── models/
-│ ├── calculation_history.dart
-│ ├── calculator_mode.dart
-│ └── calculator_settings.dart
-├── providers/
-│ ├── calculator_provider.dart
-│ ├── theme_provider.dart
-│ └── history_provider.dart
-├── screens/
-│ ├── calculator_screen.dart
-│ ├── history_screen.dart
-│ └── settings_screen.dart
-├── widgets/
-│ ├── display_area.dart
-│ ├── button_grid.dart
-│ ├── calculator_button.dart
-│ └── mode_selector.dart
-├── utils/
-│ ├── calculator_logic.dart
-│ └── expression_parser.dart
-├── constants.dart
-└── services/
-└── storage_service.dart
+├─ main.dart
+├─ models/
+├─ providers/
+├─ screens/
+├─ widgets/
+├─ utils/
+├─ services/
+
+Kiểm thử
+
+Unit tests: Đảm bảo >80% bao phủ logic tính toán
+
+Integration tests: Kiểm tra chuỗi nhấn nút, chuyển đổi chế độ, lưu/đọc lịch sử, lưu theme
+
+Ghi chú
+
+Hỗ trợ 3 chế độ: Cơ bản, Khoa học, Lập trình
+
+Tính năng khoa học, hàm nhớ, lịch sử, theme và cử chỉ hoạt động đầy đủ
+
+UI tối ưu theo thiết kế chuyên nghiệp
+
+Code theo kiến trúc sạch, dễ bảo trì và mở rộng

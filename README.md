@@ -1,75 +1,122 @@
-# Advanced Calculator
+Máy tính nâng cao (Advanced Calculator)
 
-**A professional mobile calculator application with advanced features built with Flutter.**
+Một ứng dụng máy tính di động chuyên nghiệp với các tính năng nâng cao, được xây dựng bằng Flutter.
 
----
+Mô tả dự án (Project Description)
 
-## **Project Description**
+Advanced Calculator là ứng dụng máy tính đầy đủ tính năng, hỗ trợ:
 
-Advanced Calculator is a full-featured calculator app that supports:
+Ba chế độ: Cơ bản, Khoa học, Lập trình
 
-- **Three modes:** Basic, Scientific, Programmer
-- **Scientific functions:** Trigonometric, Logarithmic, Power operations, Factorial, Constants (π, e)
-- **Memory functions:** M+, M-, MR, MC
-- **Expression parser:** Supports operator precedence (PEMDAS), parentheses, implicit multiplication
-- **History:** Stores last 25/50/100 calculations with persistence
-- **Theme system:** Light, Dark, System theme with smooth transitions
-- **Settings:** Decimal precision, angle mode (Degrees/Radians), haptic feedback, sound effects
-- **Gesture controls:** Swipe, long press, pinch to zoom
-- **Animations:** Button press, mode transitions, error shake, result fade-in
-- **Unit and integration tests:** Ensures >80% test coverage
-- **Optimized performance:** Handles complex calculations efficiently
+Hàm khoa học: Hàm lượng giác, Logarithm, Phép lũy thừa, Giai thừa, Hằng số (π, e)
 
-This project is implemented following clean architecture and advanced state management using **Provider**.
+Hàm nhớ: M+, M-, MR, MC
 
----
+Bộ phân tích biểu thức: Hỗ trợ thứ tự toán tử (PEMDAS), dấu ngoặc, nhân ngầm
 
-## **Screenshots / GIFs**
+Lịch sử: Lưu 25/50/100 phép tính gần nhất với khả năng lưu trữ
 
-| Basic Mode | Scientific Mode | Programmer Mode |
-|------------|----------------|----------------|
-| ![Basic](screenshots/basic_mode.png) | ![Scientific](screenshots/scientific_mode.png) | ![Programmer](screenshots/programmer_mode.png) |
+Hệ thống chủ đề: Giao diện sáng, tối, theo hệ thống với chuyển đổi mượt mà
 
-*Replace screenshots with your actual images or GIFs.*
+Cài đặt: Độ chính xác thập phân, chế độ góc (Độ/Radian), rung phản hồi, âm thanh
 
----
+Điều khiển cử chỉ: Vuốt, nhấn lâu, chụm để thay đổi kích thước chữ
 
-## **Features**
+Hiệu ứng hoạt ảnh: Nhấn nút, chuyển chế độ, rung khi lỗi, hiển thị kết quả mờ dần
 
-### **Calculator Modes**
-- **Basic:** Standard arithmetic operations
-- **Scientific:** sin, cos, tan, ln, log, powers, roots, factorial
-- **Programmer:** Binary, Octal, Decimal, Hex conversions; bitwise operations; bit shifting
+Kiểm thử đơn vị & tích hợp: Đảm bảo >80% bao phủ kiểm thử
 
-### **Memory Functions**
-- **M+:** Add current value to memory
-- **M-:** Subtract current value from memory
-- **MR:** Recall memory
-- **MC:** Clear memory
+Tối ưu hiệu suất: Xử lý các phép tính phức tạp hiệu quả
 
-### **History**
-- Stores last calculations
-- Tap to reuse
-- Swipe up to open
-- Clear history with long press
+Dự án được triển khai theo kiến trúc sạch và quản lý trạng thái nâng cao sử dụng Provider.
 
-### **Settings**
-- Theme selection (Light, Dark, System)
-- Decimal precision (2–10)
-- Angle mode (Degrees/Radians)
-- Haptic feedback On/Off
-- Sound effects On/Off
-- History size (25/50/100)
-- Clear all history with confirmation
+Ảnh chụp màn hình / GIF (Screenshots / GIFs)
+Chế độ cơ bản	Chế độ khoa học	Chế độ lập trình
+Basic	Scientific	Programmer
 
-### **Gestures & Animations**
-- Swipe right to delete last character
-- Pinch to change font size
-- Button press scale effect
-- Result fade-in
-- Error shake animation
+Thay thế các ảnh trên bằng ảnh hoặc GIF thực tế của bạn.
 
----
+Tính năng (Features)
+Chế độ máy tính
 
-## **Project Architecture**
+Cơ bản: Các phép tính số học tiêu chuẩn
 
+Khoa học: sin, cos, tan, ln, log, lũy thừa, căn bậc n, giai thừa
+
+Lập trình: Chuyển đổi nhị phân, bát phân, thập phân, hệ thập lục phân; các phép toán bitwise; dịch bit
+
+Hàm nhớ (Memory Functions)
+
+M+: Cộng giá trị hiện tại vào bộ nhớ
+
+M-: Trừ giá trị hiện tại khỏi bộ nhớ
+
+MR: Gọi giá trị từ bộ nhớ
+
+MC: Xóa bộ nhớ
+
+Lịch sử (History)
+
+Lưu các phép tính gần nhất
+
+Nhấn để sử dụng lại
+
+Vuốt lên để mở
+
+Nhấn lâu để xóa lịch sử
+
+Cài đặt (Settings)
+
+Chọn chủ đề (Sáng, Tối, Theo hệ thống)
+
+Độ chính xác thập phân (2–10)
+
+Chế độ góc (Độ/Radian)
+
+Rung phản hồi Bật/Tắt
+
+Âm thanh Bật/Tắt
+
+Kích thước lịch sử (25/50/100)
+
+Xóa toàn bộ lịch sử với xác nhận
+
+Cử chỉ & Hoạt ảnh (Gestures & Animations)
+
+Vuốt phải để xóa ký tự cuối
+
+Chụm để thay đổi kích thước chữ
+
+Hiệu ứng phóng to khi nhấn nút
+
+Kết quả hiển thị mờ dần
+
+Rung khi xảy ra lỗi
+
+Kiến trúc dự án (Project Architecture)
+
+lib/
+├── main.dart
+├── models/
+│ ├── calculation_history.dart
+│ ├── calculator_mode.dart
+│ └── calculator_settings.dart
+├── providers/
+│ ├── calculator_provider.dart
+│ ├── theme_provider.dart
+│ └── history_provider.dart
+├── screens/
+│ ├── calculator_screen.dart
+│ ├── history_screen.dart
+│ └── settings_screen.dart
+├── widgets/
+│ ├── display_area.dart
+│ ├── button_grid.dart
+│ ├── calculator_button.dart
+│ └── mode_selector.dart
+├── utils/
+│ ├── calculator_logic.dart
+│ └── expression_parser.dart
+├── constants.dart
+└── services/
+└── storage_service.dart

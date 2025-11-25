@@ -72,4 +72,29 @@ This project is implemented following clean architecture and advanced state mana
 ---
 
 ## **Project Architecture**
+lib/
+├─ main.dart
+├─ models/
+│   ├─ calculation_history.dart
+│   ├─ calculator_mode.dart
+│   └─ calculator_settings.dart
+├─ providers/
+│   ├─ calculator_provider.dart
+│   ├─ theme_provider.dart
+│   └─ history_provider.dart
+├─ screens/
+│   ├─ calculator_screen.dart
+│   ├─ history_screen.dart
+│   └─ settings_screen.dart
+├─ widgets/
+│   ├─ display_area.dart
+│   ├─ button_grid.dart
+│   ├─ calculator_button.dart
+│   └─ mode_selector.dart
+├─ utils/
+│   ├─ calculator_logic.dart
+│   ├─ expression_parser.dart
+│   └─ constants.dart
+└─ services/
+└─ storage_service.dart
 
